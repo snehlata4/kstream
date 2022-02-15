@@ -1,0 +1,16 @@
+management:
+  endpoints:
+    # Endpoint IDs that should be included or '*' for all.
+    web.exposure.include: "health,metrics"
+    # Base path for Web endpoints. Relative to server.servlet.context-path or management.server.servlet.context-path if management.server.port is configured.
+    web.base-path: "/"
+    # Mapping between endpoint IDs and the path that should expose them.
+    web.path-mapping.health: "alive.txt"
+    web.path-mapping.metrics: "metrics"
+  # When to show full health details.
+  endpoint.health.show-details: "always"
+  metrics.export.statsd:
+    flavor: datadog
+    enabled: true
+    host: ${DD_AGENT_HOST:localhost}
+    port: 8125

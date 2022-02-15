@@ -1,0 +1,13 @@
+{"namespace": "org.example",
+  "type": "record",
+  "name": "CustomerV1",
+  "fields": [
+    {"name": "first_name", "type": "string"},
+    {"name": "middle_name", "type": "string"},
+    {"name": "last_name", "type": "string"},
+    {"name": "address", "type": "string"},
+    {"name": "phone_number", "type": "string"},
+    {"name": "height", "type": "float"},
+    {"name": "weight", "type": "float"}
+  ]
+}
